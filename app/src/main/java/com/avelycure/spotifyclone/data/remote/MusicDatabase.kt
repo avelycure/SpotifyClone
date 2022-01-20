@@ -1,15 +1,20 @@
 package com.avelycure.spotifyclone.data.remote
 
+import com.avelycure.spotifyclone.data.entities.Song
+import com.google.firebase.firestore.FirebaseFirestore
+import com.plcoding.spotifycloneyt.other.Constants.SONG_COLLECTION
+import kotlinx.coroutines.tasks.await
+
 class MusicDatabase {
 
-    /*private val firestore = FirebaseFirestore.getInstance()
+    private val firestore = FirebaseFirestore.getInstance()
     private val songCollection = firestore.collection(SONG_COLLECTION)
 
-    suspend fun getAllSongs(): List<com.avelycure.spotifyclone.data.entities.Song>{
+    suspend fun getAllSongs(): List<Song>{
         return try {
-            songCollection.get().await().toObjects(com.avelycure.spotifyclone.data.entities.Song::class.java)
+            songCollection.get().await().toObjects(Song::class.java)
         }catch (e: Exception){
             emptyList()
         }
-    }*/
+    }
 }
